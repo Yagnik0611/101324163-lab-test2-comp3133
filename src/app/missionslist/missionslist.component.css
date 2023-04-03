@@ -1,0 +1,49 @@
+.bg-blue{
+    background-color: rgba(0, 0, 255, 0.4);
+    margin-top:11px;
+}
+
+.container-fluid {
+   
+    background-image: url('../../assets/solar-system-439046.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  }
+  
+  .card {
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+  }
+  
+  .card-img-top {
+    object-fit: contain;
+    height: 250px;
+  }
+  
+  .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .card-text {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .btn-primary {
+    background-color: coral;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+   
+    transition: all 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #ff9b7d;
+    color: #fff;
+  }
+  

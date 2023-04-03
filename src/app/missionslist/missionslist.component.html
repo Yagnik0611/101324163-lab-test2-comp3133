@@ -1,0 +1,28 @@
+<div class="container-fluid p-0">
+  <div class="container py-5">
+    <h1 class="text-center text-white mb-5" style="text-shadow: 2px 2px #333;">SpaceX Mission Launch List</h1>
+    <div class="row">
+      <div class="col-md-12 mb-5">
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Search by launch year" [(ngModel)]="launchYear">
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button" (click)="searchByYear()">Search</button>
+          </div>
+        </div>
+      </div>
+      <div *ngFor="let item of allMissions" class="col-md-6 mb-5">
+        <div class="card">
+          <img class="card-img-top" style="height: 250px; object-fit: contain;" [src]="item.links.mission_patch_small" alt="Mission patch">
+          <div class="card-body">
+            <h5 class="card-title">{{item.mission_name}}</h5>
+            <p class="card-text">{{item.details}}</p>
+            <a [routerLink]="['/detail', item.mission_name]" class="btn btn-primary">View details</a>
+          </div>
+          <div class="card-footer text-muted">
+            {{item.launch_year}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

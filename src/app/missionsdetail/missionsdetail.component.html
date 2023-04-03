@@ -1,0 +1,43 @@
+<div style="padding: 13px; ">
+    <h1 style="font-size: 32px; margin-bottom: 16px;">SpaceX Mission Details</h1>
+    <a [routerLink]="['/']"  style=" background-color: coral;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+   
+    transition: all 0.3s ease;"class="btn btn-primary mb-3">Back to List</a>
+  
+    <mat-card class="bg-pink" *ngIf="mission" style="background-color: #f5f5f5; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);">
+        <div class="row">
+            <div class="col-3 text-center">
+                <img style="width: 100%; max-width: 200px;" [src]="mission.links.mission_patch" />
+            </div>
+            <div class="col-9">
+                <mat-card-header style="margin-bottom: 0;">
+                    <mat-card-title style="font-size: 28px;">{{mission.mission_name}}</mat-card-title>
+                    <mat-card-subtitle style="font-size: 16px; margin-top: 8px;">Launch Year: {{mission.launch_year}}</mat-card-subtitle>
+
+                    <mat-card-title style="font-size: 24px; margin-top: 16px;">Rocket</mat-card-title>
+                    <mat-card-subtitle style="font-size: 16px; margin-top: 8px;">Name: {{mission.rocket.rocket_name}}</mat-card-subtitle>
+                    <mat-card-subtitle style="font-size: 16px; margin-top: 8px;">Type: {{mission.rocket.rocket_type}}</mat-card-subtitle>
+                    
+                    <mat-card-title style="font-size: 24px; margin-top: 16px;">Launch Site</mat-card-title>
+                    <mat-card-subtitle style="font-size: 16px; margin-top: 8px;">Name: {{mission.launch_site.site_name}}</mat-card-subtitle>
+                </mat-card-header>
+            </div>
+        </div>
+
+        <mat-card-content>
+            <mat-card-title>Launch Details</mat-card-title>
+            <p>
+                {{mission.details}}
+            </p>
+            <mat-card-title>More Info on Details</mat-card-title>
+            <a class="icon" href="{{mission.links.article_link}}"><i class="fa fa-file-text-o" aria-hidden="true" style="font-size: 150%;"></i></a>
+            <a class="icon" href="{{mission.links.wikipedia}}"> <i class="fa fa-firefox" aria-hidden="true" style="font-size: 150%;"></i></a>
+            <a class="icon" href="{{mission.links.video_link}}"><i class="fa fa-video-camera" aria-hidden="true" style="font-size: 150%;"></i></a>           
+        </mat-card-content>
+        
+    </mat-card>
+
+</div>

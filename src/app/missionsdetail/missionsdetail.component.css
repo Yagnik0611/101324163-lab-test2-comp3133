@@ -1,0 +1,23 @@
+.icon{
+    margin-left: 10px;
+    font-size: 18px;
+}
+.bg-pink{
+   
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: rgba(255, 255, 255, 0.8) !important;
+}
+mat-card-title{
+    font-size: 24px;
+    color: rgb(173, 209, 205);
+}
+
+body{
+
+    background-image: url('../../assets/solar-system-439046.jpg');
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+}
